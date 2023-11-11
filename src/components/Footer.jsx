@@ -10,6 +10,7 @@ const Footer = () => {
       borderTopEndRadius="3rem"
       borderTopStartRadius="3rem"
       py="55px"
+      className="foot"
     >
       <Box
         display="flex"
@@ -91,7 +92,7 @@ const Footer = () => {
         justifyContent="center"
         gap={{ base: "24px", md: "42px" }}
         className="footer-links"
-        mb="70px"
+        mb={{ base: "50px", md: "70px" }}
       >
         <Link to="/">terms of use</Link>
         <Link to="/">policy privacy</Link>
@@ -104,6 +105,7 @@ const Footer = () => {
           letterSpacing="6.4px"
           fontFamily="Bebas Neue"
           fontWeight="400"
+          className="footer-txt"
         >
           VOLAVERSE
         </Text>

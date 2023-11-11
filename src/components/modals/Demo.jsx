@@ -16,6 +16,7 @@ import {
   useDisclosure,
 } from "@chakra-ui/react";
 import React from "react";
+import Submitted from "./Submitted";
 
 const Demo = ({ children }) => {
   const { isOpen, onOpen, onClose } = useDisclosure();
@@ -39,8 +40,9 @@ const Demo = ({ children }) => {
         <ModalContent
           border="2.5px solid #3D3D3D"
           bg="#E5E9F2"
-          borderRadius="2.2rem"
+          borderRadius="1.5rem"
           px="30px"
+          className="demo-cnt"
         >
           <ModalHeader>
             <Text
@@ -136,18 +138,20 @@ const Demo = ({ children }) => {
           </ModalBody>
 
           <ModalFooter display="flex" justifyContent="center">
-            <Button
-              bg="#745AC3"
-              color="#fff"
-              px="20px"
-              fontFamily="Montserrat"
-              fontWeight="700"
-              letterSpacing="1px"
-              borderRadius="0.5rem"
-              className="btn1"
-            >
-              Submit
-            </Button>
+            <Submitted>
+              <Button
+                bg="#745AC3"
+                color="#fff"
+                px="20px"
+                fontFamily="Montserrat"
+                fontWeight="700"
+                letterSpacing="1px"
+                borderRadius="0.5rem"
+                className="btn1"
+              >
+                Submit
+              </Button>
+            </Submitted>
           </ModalFooter>
         </ModalContent>
       </Modal>

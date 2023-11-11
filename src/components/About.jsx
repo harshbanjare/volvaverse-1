@@ -8,6 +8,7 @@ const About = () => {
       p="35px 20px 50px 20px"
       border="1.5px solid #A5A5A5"
       borderRadius="1.5rem"
+      className="abt-wrap"
     >
       <Text
         fontFamily="Azeret Mono"
@@ -16,6 +17,7 @@ const About = () => {
         letterSpacing="6px"
         fontSize="3rem"
         mb="10px"
+        className="abt-head"
       >
         ABOUT US
       </Text>
@@ -24,7 +26,8 @@ const About = () => {
         fontFamily="Montserrat"
         fontWeight="500"
         letterSpacing="1px"
-        fontSize="1.3rem"
+        fontSize="1.1rem"
+        className="abt-p"
       >
         lorem This expedient serves to get an idea of the finished product that
         will soon be printed or disseminated via digital channels. lorem ipsum

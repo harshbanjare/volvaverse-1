@@ -11,30 +11,24 @@ const SheduleCall = () => {
       alignItems="center"
       borderRadius="2.5rem"
       mb="100px"
+      className="sh-c"
     >
-      <Text
-        fontFamily="Montserrat"
-        color="#3D3D3D"
-        letterSpacing="4.5px"
-        lineHeight="normal"
-        fontSize="2.5rem"
-      >
-        What are you holding out for?
-        <br /> Schedule meeting now!
-      </Text>
-      <Button
-        bg="#745AC3"
-        color="#FFFFFF"
-        fontWeight="700"
-        fontFamily="Montserrat"
-        letterSpacing="2px"
-        fontSize="1.8rem"
-        py="30px"
-        borderRadius="1rem"
-        className="btn4"
-      >
-        Schedule call
-      </Button>
+      <Box w="70%">
+        <Text
+          fontFamily="Montserrat"
+          fontWeight="600"
+          color="#3D3D3D"
+          letterSpacing="3px"
+          lineHeight="normal"
+          fontSize="2rem"
+          className="sh-txt"
+        >
+          What are you holding out for? Schedule meeting now!
+        </Text>
+      </Box>
+      <Box textAlign="end" w="30%">
+        <button className="btn4">Schedule call</button>
+      </Box>
     </Box>
   );
 };
