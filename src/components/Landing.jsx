@@ -93,7 +93,8 @@ const Landing = () => {
           zIndex="3"
           display="flex"
         >
-          <div className="img-1"></div>
+          {/* main left img */}
+          <div className="img-1 main-left-img"></div>
           <Box
             bg="#F6A1C0"
             h="190px"
@@ -101,8 +102,14 @@ const Landing = () => {
             borderBottomRadius="2.5rem"
             borderTopRightRadius="2.5rem"
             ml="24px"
+            overflow="hidden"
           >
-            <Image src="/images/img2.png" />
+            {/* vr box img  */}
+            <div className="floating">
+              <Image src="/images/img2.png" className="vr-img" />
+            </div>
+
+            {/* vr box shadow */}
             <Box display="flex" justifyContent="center" mt="-13px">
               <svg
                 xmlns="http://www.w3.org/2000/svg"
@@ -110,6 +117,7 @@ const Landing = () => {
                 height="35"
                 viewBox="0 0 228 35"
                 fill="none"
+                className="shadow"
               >
                 <g filter="url(#filter0_f_1245_1105)">
                   <ellipse
@@ -248,7 +256,12 @@ const Landing = () => {
             justifyContent="center"
             alignItems="center"
           >
-            <Image zIndex="2" h="155px" src="/images/img3.png" />
+            <Image
+              zIndex="2"
+              h="155px"
+              src="/images/img3.png"
+              className="fade-in"
+            />
           </Box>
 
           {/* purple patch 1 */}
@@ -328,7 +341,7 @@ const Landing = () => {
             alignItems="center"
             p="10px"
           >
-            <Image h="225px" src="/images/img4.png" />
+            <Image h="225px" src="/images/img4.png" className="fade-in" />
           </Box>
 
           {/* circular text */}
@@ -345,6 +358,7 @@ const Landing = () => {
             display="flex"
             justifyContent="center"
             alignItems="center"
+            className="c-txt-cnt"
           >
             <div className="c-text">
               <p>
@@ -370,6 +384,7 @@ const Landing = () => {
               w="100%"
               h="225px"
               src="/images/img5.png"
+              className="fade-in"
             />
           </Box>
         </Box>

@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect } from "react";
 import Footer from "../components/Footer";
 import SheduleCall from "../components/SheduleCall";
 import Services from "../components/Services";
@@ -7,8 +7,14 @@ import About from "../components/About";
 import Landing from "../components/Landing";
 import PhoneLanding from "../components/PhoneLanding";
 import PhoneHeader from "../components/PhoneHeader";
+import Aos from "aos";
+import "aos/dist/aos.css";
 
 const Home = () => {
+  useEffect(() => {
+    Aos.init();
+  }, []);
+
   return (
     <Box bg="#E5E9F2">
       <Box px="100px" className="pd">
@@ -43,7 +49,9 @@ const Home = () => {
       </Box>
 
       {/* footer */}
-      <Footer />
+      <Box data-aos="fade-up" data-aos-duration="1000">
+        <Footer />
+      </Box>
     </Box>
   );
 };

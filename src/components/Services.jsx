@@ -26,7 +26,7 @@ const Services = () => {
           borderRadius="1.3rem"
           display="inline-block"
           position="relative"
-          className="txt-cnt"
+          className="txt-cnt br-1"
         >
           <Text
             fontFamily="Bebas Neue"
@@ -78,12 +78,7 @@ const Services = () => {
           mt="-15px"
           className="m-cnt"
         >
-          <Box
-            minW="201px"
-            className="m-g"
-            pt={{ base: "17px", md: "50px" }}
-            zIndex="20"
-          >
+          <Box minW="201px" className="m-g pc" pt="50px" zIndex="20">
             <Text
               w="201px"
               pe="10px"
@@ -91,7 +86,6 @@ const Services = () => {
               fontFamily="Montserrat"
               fontWeight="400"
               fontSize=".9rem"
-              className="pc"
             >
               Lorem Ipsum is simply dummy text of the printing and typesetting
               industry. Lorem Ipsum has been the industry's standard dummy text
@@ -99,19 +93,6 @@ const Services = () => {
               type and scrambled it to make a type specimen book. It has
               survived not only five centuries, but also the leap into
               electronic typesetting, remaining essentially unchanged.
-            </Text>
-            <Text
-              w="115px"
-              color="#3D3D3D"
-              fontFamily="Montserrat"
-              fontWeight="400"
-              fontSize=".5rem"
-              className="ph"
-              pe="5px"
-            >
-              Lorem Ipsum is simply dummy text of the printing and typesetting
-              industry. Lorem Ipsum has been the industry's standard dummy text
-              ever since the 1500s
             </Text>
           </Box>
           <Box
@@ -121,7 +102,7 @@ const Services = () => {
             borderRightRadius="1.5rem"
             borderBottomLeftRadius="1.5rem"
             p="10px"
-            className="mp"
+            className="mp br-2"
           >
             {/* <Model1 /> */}
             <Image
@@ -132,6 +113,21 @@ const Services = () => {
             />
           </Box>
         </Box>
+
+        <Text
+          color="#3D3D3D"
+          fontFamily="Montserrat"
+          fontWeight="400"
+          fontSize=".9rem"
+          className="ph"
+          mt="10px"
+          mb="40px"
+          zIndex="20"
+        >
+          Lorem Ipsum is simply dummy text of the printing and typesetting
+          industry. Lorem Ipsum has been the industry's standard dummy text ever
+          since the 1500s
+        </Text>
       </Box>
 
       {/* section 2 */}
@@ -142,7 +138,7 @@ const Services = () => {
           borderRadius="1.3rem"
           display="inline-block"
           position="relative"
-          className="txt-cnt"
+          className="txt-cnt br-3"
         >
           <Text
             fontFamily="Bebas Neue"
@@ -201,7 +197,7 @@ const Services = () => {
             borderBottomRightRadius="1.5rem"
             p="10px"
             w="100%"
-            className="mp"
+            className="mp br-4"
           >
             <Image
               className="m-img"
@@ -210,12 +206,7 @@ const Services = () => {
               src="/images/img7.png"
             />
           </Box>
-          <Box
-            minW="201px"
-            className="m-g"
-            pt={{ base: "17px", md: "50px" }}
-            zIndex="20"
-          >
+          <Box minW="201px" className="m-g pc" pt="50px" zIndex="20">
             <Text
               w="201px"
               ps="10px"
@@ -233,22 +224,22 @@ const Services = () => {
               survived not only five centuries, but also the leap into
               electronic typesetting, remaining essentially unchanged.
             </Text>
-            <Text
-              w="115px"
-              textAlign="start"
-              color="#3D3D3D"
-              fontFamily="Montserrat"
-              fontWeight="400"
-              fontSize=".5rem"
-              className="ph"
-              ps="5px"
-            >
-              Lorem Ipsum is simply dummy text of the printing and typesetting
-              industry. Lorem Ipsum has been the industry's standard dummy text
-              ever since the 1500s
-            </Text>
           </Box>
         </Box>
+
+        <Text
+          color="#3D3D3D"
+          fontFamily="Montserrat"
+          fontWeight="400"
+          fontSize=".9rem"
+          className="ph"
+          textAlign="start"
+          mt="10px"
+        >
+          Lorem Ipsum is simply dummy text of the printing and typesetting
+          industry. Lorem Ipsum has been the industry's standard dummy text ever
+          since the 1500s
+        </Text>
       </Box>
     </Box>
   );

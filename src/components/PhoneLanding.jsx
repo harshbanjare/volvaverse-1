@@ -72,18 +72,35 @@ const PhoneLanding = () => {
 
         <div className="grd">
           <Box bg="#E5E9F2" p="4px" zIndex="20" borderRadius="1rem">
-            <Box bg="#F6A1C0" borderRadius="1rem">
-              <Image src="/images/img9.png" />
+            <Box bg="#F6A1C0" borderRadius="1rem" className="cor-img-1">
+              <Image src="/images/img9.png" w="100%" />
             </Box>
           </Box>
           <Box bg="#745AC3" p="4px" zIndex="20" borderRadius="1rem">
-            <Image zIndex="20" src="/images/img8.png" />
+            <Image
+              zIndex="20"
+              src="/images/img8.png"
+              w="100%"
+              h="100%"
+              className="fade-in"
+            />
           </Box>
           <Box bg="#745AC3" p="4px" zIndex="20" borderRadius="1rem">
-            <Image src="/images/img8.png" />
+            <Image
+              src="/images/img8.png"
+              w="100%"
+              h="100%"
+              zIndex="20"
+              className="fade-in"
+            />
           </Box>
           <Box bg="#E5E9F2" p="4px" zIndex="20" borderRadius="1rem">
-            <Image borderRadius="1rem" src="/images/img10.png" />
+            <Image
+              borderRadius="1rem"
+              src="/images/img10.png"
+              w="100%"
+              className="cor-img-2"
+            />
           </Box>
         </div>
       </Box>
