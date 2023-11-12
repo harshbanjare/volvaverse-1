@@ -12,7 +12,7 @@ const Services = () => {
         lineHeight="normal"
         letterSpacing="4px"
         fontSize="3.2rem"
-        mb="20px"
+        mb={{ base: "10px", md: "20px" }}
         className="se-txt"
       >
         OUR SERVICES
@@ -90,7 +90,7 @@ const Services = () => {
               color="#3D3D3D"
               fontFamily="Montserrat"
               fontWeight="400"
-              fontSize=".8rem"
+              fontSize=".9rem"
               className="pc"
             >
               Lorem Ipsum is simply dummy text of the printing and typesetting
@@ -223,7 +223,7 @@ const Services = () => {
               color="#3D3D3D"
               fontFamily="Montserrat"
               fontWeight="400"
-              fontSize=".8rem"
+              fontSize=".9rem"
               className="pc"
             >
               Lorem Ipsum is simply dummy text of the printing and typesetting

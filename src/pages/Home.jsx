@@ -22,7 +22,7 @@ const Home = () => {
       </Box>
 
       {/* small-view */}
-      <Box className="ph" px="10px" pt="110px" mb="100px">
+      <Box className="ph" px="10px" pt="120px" mb="100px">
         <PhoneLanding />
       </Box>
 

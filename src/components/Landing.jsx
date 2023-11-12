@@ -2,6 +2,7 @@ import { Box, Button, Image, Text } from "@chakra-ui/react";
 import React, { useEffect } from "react";
 import { HashLink } from "react-router-hash-link";
 import Demo from "./modals/Demo";
+import CircularText from "./CircularText";
 
 const Landing = () => {
   // useEffect(() => {
@@ -347,7 +348,8 @@ const Landing = () => {
           >
             <div className="c-text">
               <p>
-                •Solve your problem in metaverse •Get your metaverse solutions
+                {/* •Solve your problem in metaverse •Get your metaverse solutions */}
+                <CircularText />
               </p>
             </div>
             <Image src="/images/plus.png" h="80px" w="80px" />

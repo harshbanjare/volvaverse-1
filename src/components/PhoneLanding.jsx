@@ -1,5 +1,6 @@
 import { Box, Button, Image, Text } from "@chakra-ui/react";
 import React from "react";
+import Demo from "./modals/Demo";
 
 const PhoneLanding = () => {
   return (
@@ -31,17 +32,19 @@ const PhoneLanding = () => {
           ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum
         </Text>
         <Box display="flex" justifyContent="space-evenly">
-          <Button
-            bg="#F6A1C0"
-            color="#3D3D3D"
-            fontFamily="Montserrat"
-            fontWeight="700"
-            letterSpacing="1px"
-            borderRadius=".5rem"
-            className="btn5"
-          >
-            Get a Demo
-          </Button>
+          <Demo>
+            <Button
+              bg="#F6A1C0"
+              color="#3D3D3D"
+              fontFamily="Montserrat"
+              fontWeight="700"
+              letterSpacing="1px"
+              borderRadius=".5rem"
+              className="btn5"
+            >
+              Get a Demo
+            </Button>
+          </Demo>
           <Button
             bg="#745AC3"
             color="#FFF"
@@ -54,6 +57,35 @@ const PhoneLanding = () => {
             Schedule call
           </Button>
         </Box>
+      </Box>
+
+      <Box position="relative" mt="35px">
+        <Box
+          h="100px"
+          w="100px"
+          bg="#745AC3"
+          position="absolute"
+          top="50%"
+          left="50%"
+          className="pl-pa"
+        ></Box>
+
+        <div className="grd">
+          <Box bg="#E5E9F2" p="4px" zIndex="20" borderRadius="1rem">
+            <Box bg="#F6A1C0" borderRadius="1rem">
+              <Image src="/images/img9.png" />
+            </Box>
+          </Box>
+          <Box bg="#745AC3" p="4px" zIndex="20" borderRadius="1rem">
+            <Image zIndex="20" src="/images/img8.png" />
+          </Box>
+          <Box bg="#745AC3" p="4px" zIndex="20" borderRadius="1rem">
+            <Image src="/images/img8.png" />
+          </Box>
+          <Box bg="#E5E9F2" p="4px" zIndex="20" borderRadius="1rem">
+            <Image borderRadius="1rem" src="/images/img10.png" />
+          </Box>
+        </div>
       </Box>
     </Box>
   );
