@@ -14,6 +14,33 @@ const Landing = () => {
   //     .join("");
   // }, []);
 
+  // useEffect(() => {
+  //   const imageElements = document.querySelectorAll("img");
+
+  //   const handleImageLoad = () => {
+  //     const allImagesLoaded = Array.from(imageElements).every(
+  //       (img) => img.complete && img.naturalHeight !== 0
+  //     );
+  //     console.log(allImagesLoaded);
+
+  //     if (allImagesLoaded) {
+  //       onImagesLoaded(true);
+  //     } else {
+  //       onImagesLoaded(false);
+  //     }
+  //   };
+
+  //   imageElements.forEach((img) => {
+  //     img.addEventListener("load", handleImageLoad);
+  //   });
+
+  //   return () => {
+  //     imageElements.forEach((img) => {
+  //       img.removeEventListener("load", handleImageLoad);
+  //     });
+  //   };
+  // }, [onImagesLoaded]);
+
   const handleHover = (e) => {
     const elements = document.querySelectorAll(".blur");
     elements.forEach((el) => {
@@ -64,7 +91,9 @@ const Landing = () => {
             zIndex="10"
           >
             <Box display="flex" alignItems="center" gap="15px">
-              <Image h="2.5rem" src="/images/logo1.png" />
+              <Box w="41.81px">
+                <Image h="2.5rem" src="/images/logo1.png" />
+              </Box>
               <Text
                 color="#3B3B3B"
                 fontSize="2.1rem"

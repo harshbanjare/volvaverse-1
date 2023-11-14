@@ -1,8 +1,35 @@
 import { Box, Image, Text } from "@chakra-ui/react";
-import React from "react";
+import React, { useEffect } from "react";
 import Model1 from "./models/Model1";
 
 const Services = () => {
+  // useEffect(() => {
+  //   const imageElements = document.querySelectorAll(".m-img");
+
+  //   const handleImageLoad = () => {
+  //     const allImagesLoaded = Array.from(imageElements).every(
+  //       (img) => img.complete && img.naturalHeight !== 0
+  //     );
+  //     console.log(allImagesLoaded);
+
+  //     if (allImagesLoaded) {
+  //       onImagesLoaded(true);
+  //     } else {
+  //       onImagesLoaded(false);
+  //     }
+  //   };
+
+  //   imageElements.forEach((img) => {
+  //     img.addEventListener("load", handleImageLoad);
+  //   });
+
+  //   return () => {
+  //     imageElements.forEach((img) => {
+  //       img.removeEventListener("load", handleImageLoad);
+  //     });
+  //   };
+  // }, [onImagesLoaded]);
+
   return (
     <Box mb="150px" className="s-mb">
       <Text
@@ -104,13 +131,13 @@ const Services = () => {
             p="10px"
             className="mp br-2"
           >
-            {/* <Model1 /> */}
-            <Image
+            <Model1 />
+            {/* <Image
               className="m-img"
               w="100%"
               borderRadius="1.5rem"
               src="/images/img6.png"
-            />
+            /> */}
           </Box>
         </Box>
 

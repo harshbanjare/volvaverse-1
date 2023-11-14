@@ -1,35 +1,29 @@
 import {
   Box,
-  Button,
-  FormControl,
-  FormLabel,
-  Input,
   Modal,
   ModalBody,
-  ModalCloseButton,
   ModalContent,
-  ModalFooter,
-  ModalHeader,
   ModalOverlay,
-  Select,
   Text,
-  Textarea,
   useDisclosure,
 } from "@chakra-ui/react";
-import React from "react";
+import React, { useEffect } from "react";
 
-const Submitted = ({ children }) => {
+const Submitted = ({ message, resetSubmitted }) => {
   const { isOpen, onOpen, onClose } = useDisclosure();
 
   const initialRef = React.useRef(null);
   const finalRef = React.useRef(null);
 
+  useEffect(() => {
+    onOpen();
+  }, []);
+
   return (
     <>
-      <span onClick={onOpen}>{children}</span>
-
       {/* modal */}
       <Modal
+        closeOnOverlayClick={false}
         initialFocusRef={initialRef}
         finalFocusRef={finalRef}
         isOpen={isOpen}
@@ -42,7 +36,13 @@ const Submitted = ({ children }) => {
           bg="#E5E9F2"
           borderRadius="1.5rem"
         >
-          <span className="modal-close-btn" onClick={onClose}>
+          <span
+            className="modal-close-btn"
+            onClick={() => {
+              onClose();
+              resetSubmitted();
+            }}
+          >
             <svg
               xmlns="http://www.w3.org/2000/svg"
               width="35"
@@ -105,11 +105,12 @@ const Submitted = ({ children }) => {
                 fontSize="0.7rem"
                 lineHeight="120%"
               >
-                Norem ipsum dolor sit amet, consectetur adipiscing elit. Nunc
+                {/* Norem ipsum dolor sit amet, consectetur adipiscing elit. Nunc
                 vulputate libero et velit interdum, ac aliquet odio mattis.
                 Class aptent taciti sociosqu ad litora torquent per conubia
                 nostra, per inceptos himenaeos.Norem ipsum dolor sit amet,
-                consectetur adipisc
+                consectetur adipisc */}
+                {message.message}
               </Text>
             </Box>
           </ModalBody>

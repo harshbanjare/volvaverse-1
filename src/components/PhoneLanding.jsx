@@ -1,8 +1,35 @@
 import { Box, Button, Image, Text } from "@chakra-ui/react";
-import React from "react";
+import React, { useEffect } from "react";
 import Demo from "./modals/Demo";
 
 const PhoneLanding = () => {
+  // useEffect(() => {
+  //   const imageElements = document.querySelectorAll("img");
+
+  //   const handleImageLoad = () => {
+  //     const allImagesLoaded = Array.from(imageElements).every(
+  //       (img) => img.complete && img.naturalHeight !== 0
+  //     );
+  //     console.log(allImagesLoaded);
+
+  //     if (allImagesLoaded) {
+  //       onImagesLoaded(true);
+  //     } else {
+  //       onImagesLoaded(false);
+  //     }
+  //   };
+
+  //   imageElements.forEach((img) => {
+  //     img.addEventListener("load", handleImageLoad);
+  //   });
+
+  //   return () => {
+  //     imageElements.forEach((img) => {
+  //       img.removeEventListener("load", handleImageLoad);
+  //     });
+  //   };
+  // }, [onImagesLoaded]);
+
   return (
     <Box>
       <Box borderRadius="1.5rem" border="1px solid #A5A5A5" p="25px 7px">
@@ -73,11 +100,12 @@ const PhoneLanding = () => {
         <div className="grd">
           <Box bg="#E5E9F2" p="4px" zIndex="20" borderRadius="1rem">
             <Box bg="#F6A1C0" borderRadius="1rem" className="cor-img-1">
-              <Image src="/images/img9.png" w="100%" />
+              <Image loading="lazy" src="/images/img9.png" w="100%" />
             </Box>
           </Box>
           <Box bg="#745AC3" p="4px" zIndex="20" borderRadius="1rem">
             <Image
+              loading="lazy"
               zIndex="20"
               src="/images/img8.png"
               w="100%"
@@ -88,6 +116,7 @@ const PhoneLanding = () => {
           <Box bg="#745AC3" p="4px" zIndex="20" borderRadius="1rem">
             <Image
               src="/images/img8.png"
+              loading="lazy"
               w="100%"
               h="100%"
               zIndex="20"
@@ -96,6 +125,7 @@ const PhoneLanding = () => {
           </Box>
           <Box bg="#E5E9F2" p="4px" zIndex="20" borderRadius="1rem">
             <Image
+              loading="lazy"
               borderRadius="1rem"
               src="/images/img10.png"
               w="100%"

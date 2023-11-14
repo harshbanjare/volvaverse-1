@@ -485,12 +485,17 @@
 
 /* demo form modal */
 
-.form-inputs {
+/* .form-inputs {
   border: 2px solid #745AC3 !important;
-}
+} */
 
 .form-inputs:focus {
   box-shadow: none !important;
+  border: 2px solid #745AC3 !important;
+}
+
+.form-inputs:hover {
+  border: 2px solid #745AC3 !important;
 }
 
 .form-inputs::placeholder {
