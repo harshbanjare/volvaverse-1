@@ -1,35 +1,9 @@
 import { Box, Image, Text } from "@chakra-ui/react";
 import React, { useEffect } from "react";
-import Model1 from "./models/Model1";
+import ModelViewer from "./models/Model1";
+import servicesData from "../data/services/data";
 
 const Services = () => {
-  // useEffect(() => {
-  //   const imageElements = document.querySelectorAll(".m-img");
-
-  //   const handleImageLoad = () => {
-  //     const allImagesLoaded = Array.from(imageElements).every(
-  //       (img) => img.complete && img.naturalHeight !== 0
-  //     );
-  //     console.log(allImagesLoaded);
-
-  //     if (allImagesLoaded) {
-  //       onImagesLoaded(true);
-  //     } else {
-  //       onImagesLoaded(false);
-  //     }
-  //   };
-
-  //   imageElements.forEach((img) => {
-  //     img.addEventListener("load", handleImageLoad);
-  //   });
-
-  //   return () => {
-  //     imageElements.forEach((img) => {
-  //       img.removeEventListener("load", handleImageLoad);
-  //     });
-  //   };
-  // }, [onImagesLoaded]);
-
   return (
     <Box mb="150px" className="s-mb">
       <Text
@@ -38,236 +12,253 @@ const Services = () => {
         fontWeight="400"
         lineHeight="normal"
         letterSpacing="4px"
-        fontSize="3.2rem"
+        fontSize="3rem"
         mb={{ base: "10px", md: "20px" }}
         className="se-txt"
+        textTransform="uppercase"
+        textAlign="center"
       >
-        OUR SERVICES
+        Our Services
       </Text>
 
-      {/* section 1 */}
-      <Box>
-        <Box
-          bg="#F899BB"
-          p="20px 25px 17px 25px"
-          borderRadius="1.3rem"
-          display="inline-block"
-          position="relative"
-          className="txt-cnt br-1"
-        >
-          <Text
-            fontFamily="Bebas Neue"
-            fontWeight="400"
-            color="#FFF"
-            fontSize="2rem"
-            textTransform="uppercase"
-            letterSpacing="2px"
-            className="se-s-txt"
-          >
-            Architecture
-          </Text>
-          <Box
-            h="90px"
-            w="90px"
-            bg="#F899BB"
-            bottom="-60px"
-            right="-55px"
-            position="absolute"
-            className="sa-1"
-          ></Box>
+      {servicesData.map((data, index) => (
+        <>
+          {index % 2 === 0 ? (
+            <Box key={data.title}>
+              <Box
+                bg="#F899BB"
+                p="20px 25px 17px 25px"
+                borderRadius="1.3rem"
+                display="inline-block"
+                position="relative"
+                className="txt-cnt br-1"
+                minW="216.12px"
+              >
+                <Text
+                  fontFamily="Bebas Neue"
+                  fontWeight="400"
+                  color="#FFF"
+                  fontSize="2rem"
+                  textTransform="uppercase"
+                  letterSpacing="2px"
+                  className="se-s-txt"
+                  textAlign="center"
+                >
+                  {data.title}
+                </Text>
+                <Box
+                  h="90px"
+                  w="90px"
+                  bg="#F899BB"
+                  bottom="-60px"
+                  right="-55px"
+                  position="absolute"
+                  className="sa-1"
+                ></Box>
 
-          <Box
-            bg="#E5E9F2"
-            h="70px"
-            w="60px"
-            borderBottomLeftRadius="1.3rem"
-            position="absolute"
-            top="0"
-            right="-59px"
-            className="sb-1"
-          ></Box>
-          <Box
-            bg="#E5E9F2"
-            h="70px"
-            w="60px"
-            borderTopRightRadius="1.3rem"
-            position="absolute"
-            bottom="-70px"
-            right="15px"
-            className="sb-2"
-          ></Box>
-        </Box>
+                <Box
+                  bg="#E5E9F2"
+                  h="70px"
+                  w="60px"
+                  borderBottomLeftRadius="1.3rem"
+                  position="absolute"
+                  top="0"
+                  right="-59px"
+                  className="sb-1"
+                ></Box>
+                <Box
+                  bg="#E5E9F2"
+                  h="70px"
+                  w="60px"
+                  borderTopRightRadius="1.3rem"
+                  position="absolute"
+                  bottom="-70px"
+                  right="15px"
+                  className="sb-2"
+                ></Box>
+              </Box>
 
-        {/* 3d model-1 */}
-        <Box
-          display="flex"
-          justifyContent="space-between"
-          mt="-15px"
-          className="m-cnt"
-        >
-          <Box minW="201px" className="m-g pc" pt="50px" zIndex="20">
-            <Text
-              w="201px"
-              pe="10px"
-              color="#3D3D3D"
-              fontFamily="Montserrat"
-              fontWeight="400"
-              fontSize=".9rem"
-            >
-              Lorem Ipsum is simply dummy text of the printing and typesetting
-              industry. Lorem Ipsum has been the industry's standard dummy text
-              ever since the 1500s, when an unknown printer took a galley of
-              type and scrambled it to make a type specimen book. It has
-              survived not only five centuries, but also the leap into
-              electronic typesetting, remaining essentially unchanged.
-            </Text>
-          </Box>
-          <Box
-            zIndex="20"
-            bg="#F899BB"
-            w="100%"
-            borderRightRadius="1.5rem"
-            borderBottomLeftRadius="1.5rem"
-            p="10px"
-            className="mp br-2"
-          >
-            <Model1 />
-            {/* <Image
-              className="m-img"
-              w="100%"
-              borderRadius="1.5rem"
-              src="/images/img6.png"
-            /> */}
-          </Box>
-        </Box>
+              {/* 3d model-1 */}
+              <Box
+                display="flex"
+                justifyContent="space-between"
+                mt="-15px"
+                className="m-cnt"
+              >
+                <Box minW="201px" className="m-g pc" pt="50px" zIndex="20">
+                  <Text
+                    w="201px"
+                    pe="10px"
+                    color="#3D3D3D"
+                    fontFamily="Montserrat"
+                    fontWeight="400"
+                    fontSize=".9rem"
+                  >
+                    {data.body}
+                  </Text>
+                </Box>
+                <Box
+                  zIndex="20"
+                  bg="#F899BB"
+                  w="100%"
+                  borderRightRadius="1.5rem"
+                  borderBottomLeftRadius="1.5rem"
+                  p="10px"
+                  className="mp br-2"
+                >
+                  {data.is_3dModel ? (
+                    <Box
+                      bg="#E5E9F2"
+                      h="100%"
+                      borderRadius="1.5rem"
+                      overflow="hidden"
+                    >
+                      <ModelViewer url={data.media_path} />
+                    </Box>
+                  ) : (
+                    <Image
+                      className="m-img"
+                      w="100%"
+                      borderRadius="1.5rem"
+                      src={data.media_path}
+                    />
+                  )}
+                </Box>
+              </Box>
 
-        <Text
-          color="#3D3D3D"
-          fontFamily="Montserrat"
-          fontWeight="400"
-          fontSize=".9rem"
-          className="ph"
-          mt="10px"
-          mb="40px"
-          zIndex="20"
-        >
-          Lorem Ipsum is simply dummy text of the printing and typesetting
-          industry. Lorem Ipsum has been the industry's standard dummy text ever
-          since the 1500s
-        </Text>
-      </Box>
+              <Text
+                color="#3D3D3D"
+                fontFamily="Montserrat"
+                fontWeight="400"
+                fontSize=".9rem"
+                className="ph"
+                mt="10px"
+                mb="40px"
+                zIndex="20"
+              >
+                {data.body}
+              </Text>
+            </Box>
+          ) : (
+            <Box textAlign="end" my="40px" className="s-mt" key={data.title}>
+              <Box
+                bg="#745AC3"
+                p="20px 25px 17px 25px"
+                borderRadius="1.3rem"
+                display="inline-block"
+                position="relative"
+                className="txt-cnt br-3"
+                minW="216.12px"
+              >
+                <Text
+                  fontFamily="Bebas Neue"
+                  fontWeight="400"
+                  color="#FFF"
+                  fontSize="2rem"
+                  textTransform="uppercase"
+                  letterSpacing="2px"
+                  className="se-s-txt"
+                  textAlign="center"
+                >
+                  {data.title}
+                </Text>
+                <Box
+                  h="90px"
+                  w="90px"
+                  bg="#745AC3"
+                  bottom="-60px"
+                  left="-55px"
+                  position="absolute"
+                  className="sa-1"
+                ></Box>
 
-      {/* section 2 */}
-      <Box textAlign="end" mt="40px" className="s-mt">
-        <Box
-          bg="#745AC3"
-          p="20px 25px 17px 25px"
-          borderRadius="1.3rem"
-          display="inline-block"
-          position="relative"
-          className="txt-cnt br-3"
-        >
-          <Text
-            fontFamily="Bebas Neue"
-            fontWeight="400"
-            color="#FFF"
-            fontSize="2rem"
-            textTransform="uppercase"
-            letterSpacing="2px"
-            className="se-s-txt"
-          >
-            Meeting Room
-          </Text>
-          <Box
-            h="90px"
-            w="90px"
-            bg="#745AC3"
-            bottom="-60px"
-            left="-55px"
-            position="absolute"
-            className="sa-1"
-          ></Box>
+                <Box
+                  bg="#E5E9F2"
+                  h="70px"
+                  w="60px"
+                  borderBottomRightRadius="1.3rem"
+                  position="absolute"
+                  top="0"
+                  left="-59px"
+                  className="sb-3"
+                ></Box>
+                <Box
+                  bg="#E5E9F2"
+                  h="70px"
+                  w="60px"
+                  borderTopLeftRadius="1.3rem"
+                  position="absolute"
+                  bottom="-70px"
+                  left="15px"
+                  className="sb-4"
+                ></Box>
+              </Box>
 
-          <Box
-            bg="#E5E9F2"
-            h="70px"
-            w="60px"
-            borderBottomRightRadius="1.3rem"
-            position="absolute"
-            top="0"
-            left="-59px"
-            className="sb-3"
-          ></Box>
-          <Box
-            bg="#E5E9F2"
-            h="70px"
-            w="60px"
-            borderTopLeftRadius="1.3rem"
-            position="absolute"
-            bottom="-70px"
-            left="15px"
-            className="sb-4"
-          ></Box>
-        </Box>
+              {/* 3d model 2 */}
+              <Box
+                display="flex"
+                justifyContent="space-between"
+                mt="-15px"
+                className="m-cnt"
+              >
+                <Box
+                  zIndex="20"
+                  bg="#745AC3"
+                  borderLeftRadius="1.5rem"
+                  borderBottomRightRadius="1.5rem"
+                  p="10px"
+                  w="100%"
+                  className="mp br-4"
+                >
+                  {data.is_3dModel ? (
+                    <Box
+                      bg="#E5E9F2"
+                      h="100%"
+                      borderRadius="1.5rem"
+                      overflow="hidden"
+                    >
+                      <ModelViewer url={data.media_path} />
+                    </Box>
+                  ) : (
+                    <Image
+                      className="m-img"
+                      w="100%"
+                      borderRadius="1.5rem"
+                      src={data.media_path}
+                    />
+                  )}
+                </Box>
+                <Box minW="201px" className="m-g pc" pt="50px" zIndex="20">
+                  <Text
+                    w="201px"
+                    ps="10px"
+                    textAlign="start"
+                    color="#3D3D3D"
+                    fontFamily="Montserrat"
+                    fontWeight="400"
+                    fontSize=".9rem"
+                    className="pc"
+                  >
+                    {data.body}
+                  </Text>
+                </Box>
+              </Box>
 
-        {/* 3d model 2 */}
-        <Box
-          display="flex"
-          justifyContent="space-between"
-          mt="-15px"
-          className="m-cnt"
-        >
-          <Box
-            zIndex="20"
-            bg="#745AC3"
-            borderLeftRadius="1.5rem"
-            borderBottomRightRadius="1.5rem"
-            p="10px"
-            w="100%"
-            className="mp br-4"
-          >
-            <Image
-              className="m-img"
-              borderRadius="1.5rem"
-              w="100%"
-              src="/images/img7.png"
-            />
-          </Box>
-          <Box minW="201px" className="m-g pc" pt="50px" zIndex="20">
-            <Text
-              w="201px"
-              ps="10px"
-              textAlign="start"
-              color="#3D3D3D"
-              fontFamily="Montserrat"
-              fontWeight="400"
-              fontSize=".9rem"
-              className="pc"
-            >
-              Lorem Ipsum is simply dummy text of the printing and typesetting
-              industry. Lorem Ipsum has been the industry's standard dummy text
-              ever since the 1500s, when an unknown printer took a galley of
-              type and scrambled it to make a type specimen book. It has
-              survived not only five centuries, but also the leap into
-              electronic typesetting, remaining essentially unchanged.
-            </Text>
-          </Box>
-        </Box>
-
-        <Text
-          color="#3D3D3D"
-          fontFamily="Montserrat"
-          fontWeight="400"
-          fontSize=".9rem"
-          className="ph"
-          textAlign="start"
-          mt="10px"
-        >
-          Lorem Ipsum is simply dummy text of the printing and typesetting
-          industry. Lorem Ipsum has been the industry's standard dummy text ever
-          since the 1500s
-        </Text>
-      </Box>
+              <Text
+                color="#3D3D3D"
+                fontFamily="Montserrat"
+                fontWeight="400"
+                fontSize=".9rem"
+                className="ph"
+                textAlign="start"
+                mt="10px"
+              >
+                {data.body}
+              </Text>
+            </Box>
+          )}
+        </>
+      ))}
     </Box>
   );
 };

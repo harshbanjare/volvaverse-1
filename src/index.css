@@ -674,6 +674,7 @@
 
   .br-1 {
     border-bottom-left-radius: 0px !important;
+    min-width: 150px !important;
   }
 
   .br-2 {
@@ -682,6 +683,7 @@
   
   .br-3 {
     border-bottom-right-radius: 0px !important;
+    min-width: 150px !important;
   }
   
   .br-4 {

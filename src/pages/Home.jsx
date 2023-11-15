@@ -12,7 +12,7 @@ import "aos/dist/aos.css";
 import { jelly } from "ldrs";
 
 const Home = () => {
-  const [isLoaded, setIsLoaded] = useState(true);
+  const [isLoaded, setIsLoaded] = useState(false);
 
   const handleImagesLoaded = (loaded) => {
     // setIsLoaded(loaded);
@@ -23,6 +23,12 @@ const Home = () => {
   useEffect(() => {
     jelly.register();
     Aos.init();
+
+    const loadingTimeout = setTimeout(() => {
+      setIsLoaded(true);
+    }, 2000);
+
+    return () => clearTimeout(loadingTimeout);
   }, []);
 
   return (
@@ -50,7 +56,7 @@ const Home = () => {
 
           {/* small-view */}
           <Box className="ph" px="10px" pt="120px" mb="100px">
-            <PhoneLanding onImagesLoaded={handleImagesLoaded} />
+            <PhoneLanding />
           </Box>
 
           {/* about */}
@@ -60,7 +66,7 @@ const Home = () => {
 
           {/* services */}
           <Box px="100px" className="pd">
-            <Services onImagesLoaded={handleImagesLoaded} />
+            <Services />
           </Box>
 
           {/* schedule call */}

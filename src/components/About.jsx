@@ -11,13 +11,15 @@ const About = () => {
       className="abt-wrap"
     >
       <Text
-        fontFamily="Azeret Mono"
-        fontWeight="700"
+        fontFamily="Bebas Neue"
+        fontWeight="400"
         color="#3D3D3D"
-        letterSpacing="6px"
-        fontSize="3rem"
+        letterSpacing="4px"
+        lineHeight="normal"
+        fontSize="2.9rem"
         mb="10px"
         className="abt-head"
+        textAlign="center"
       >
         ABOUT US
       </Text>
