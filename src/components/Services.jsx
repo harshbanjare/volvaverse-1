@@ -6,6 +6,7 @@ import servicesData from "../data/services/data";
 const Services = () => {
   return (
     <Box mb="150px" className="s-mb">
+      {/* heading */}
       <Text
         color="#3D3D3D"
         fontFamily="Bebas Neue"
@@ -21,10 +22,13 @@ const Services = () => {
         Our Services
       </Text>
 
+      {/* even data => 0, 2, 4, 6 ......  */}
+
       {servicesData.map((data, index) => (
         <>
           {index % 2 === 0 ? (
             <Box key={data.title}>
+              {/* title bg */}
               <Box
                 bg="#F899BB"
                 p="20px 25px 17px 25px"
@@ -34,6 +38,7 @@ const Services = () => {
                 className="txt-cnt br-1"
                 minW="216.12px"
               >
+                {/* title  */}
                 <Text
                   fontFamily="Bebas Neue"
                   fontWeight="400"
@@ -56,6 +61,7 @@ const Services = () => {
                   className="sa-1"
                 ></Box>
 
+                {/* bg curve-1 */}
                 <Box
                   bg="#E5E9F2"
                   h="70px"
@@ -66,6 +72,8 @@ const Services = () => {
                   right="-59px"
                   className="sb-1"
                 ></Box>
+
+                {/* bg curve-2 */}
                 <Box
                   bg="#E5E9F2"
                   h="70px"
@@ -78,7 +86,7 @@ const Services = () => {
                 ></Box>
               </Box>
 
-              {/* 3d model-1 */}
+              {/* 3d model / image */}
               <Box
                 display="flex"
                 justifyContent="space-between"
@@ -86,6 +94,7 @@ const Services = () => {
                 className="m-cnt"
               >
                 <Box minW="201px" className="m-g pc" pt="50px" zIndex="20">
+                  {/* body text for large screen  */}
                   <Text
                     w="201px"
                     pe="10px"
@@ -126,6 +135,7 @@ const Services = () => {
                 </Box>
               </Box>
 
+              {/* body text for small screen */}
               <Text
                 color="#3D3D3D"
                 fontFamily="Montserrat"
@@ -140,122 +150,128 @@ const Services = () => {
               </Text>
             </Box>
           ) : (
-            <Box textAlign="end" my="40px" className="s-mt" key={data.title}>
-              <Box
-                bg="#745AC3"
-                p="20px 25px 17px 25px"
-                borderRadius="1.3rem"
-                display="inline-block"
-                position="relative"
-                className="txt-cnt br-3"
-                minW="216.12px"
-              >
-                <Text
-                  fontFamily="Bebas Neue"
-                  fontWeight="400"
-                  color="#FFF"
-                  fontSize="2rem"
-                  textTransform="uppercase"
-                  letterSpacing="2px"
-                  className="se-s-txt"
-                  textAlign="center"
-                >
-                  {data.title}
-                </Text>
+            <>
+              {/* even data => 0, 2, 4, 6 ......  */}
+              <Box textAlign="end" my="40px" className="s-mt" key={data.title}>
                 <Box
-                  h="90px"
-                  w="90px"
                   bg="#745AC3"
-                  bottom="-60px"
-                  left="-55px"
-                  position="absolute"
-                  className="sa-1"
-                ></Box>
-
-                <Box
-                  bg="#E5E9F2"
-                  h="70px"
-                  w="60px"
-                  borderBottomRightRadius="1.3rem"
-                  position="absolute"
-                  top="0"
-                  left="-59px"
-                  className="sb-3"
-                ></Box>
-                <Box
-                  bg="#E5E9F2"
-                  h="70px"
-                  w="60px"
-                  borderTopLeftRadius="1.3rem"
-                  position="absolute"
-                  bottom="-70px"
-                  left="15px"
-                  className="sb-4"
-                ></Box>
-              </Box>
-
-              {/* 3d model 2 */}
-              <Box
-                display="flex"
-                justifyContent="space-between"
-                mt="-15px"
-                className="m-cnt"
-              >
-                <Box
-                  zIndex="20"
-                  bg="#745AC3"
-                  borderLeftRadius="1.5rem"
-                  borderBottomRightRadius="1.5rem"
-                  p="10px"
-                  w="100%"
-                  className="mp br-4"
+                  p="20px 25px 17px 25px"
+                  borderRadius="1.3rem"
+                  display="inline-block"
+                  position="relative"
+                  className="txt-cnt br-3"
+                  minW="216.12px"
                 >
-                  {data.is_3dModel ? (
-                    <Box
-                      bg="#E5E9F2"
-                      h="100%"
-                      borderRadius="1.5rem"
-                      overflow="hidden"
-                    >
-                      <ModelViewer url={data.media_path} />
-                    </Box>
-                  ) : (
-                    <Image
-                      className="m-img"
-                      w="100%"
-                      borderRadius="1.5rem"
-                      src={data.media_path}
-                    />
-                  )}
-                </Box>
-                <Box minW="201px" className="m-g pc" pt="50px" zIndex="20">
+                  {/* title */}
                   <Text
-                    w="201px"
-                    ps="10px"
-                    textAlign="start"
-                    color="#3D3D3D"
-                    fontFamily="Montserrat"
+                    fontFamily="Bebas Neue"
                     fontWeight="400"
-                    fontSize=".9rem"
-                    className="pc"
+                    color="#FFF"
+                    fontSize="2rem"
+                    textTransform="uppercase"
+                    letterSpacing="2px"
+                    className="se-s-txt"
+                    textAlign="center"
                   >
-                    {data.body}
+                    {data.title}
                   </Text>
-                </Box>
-              </Box>
+                  <Box
+                    h="90px"
+                    w="90px"
+                    bg="#745AC3"
+                    bottom="-60px"
+                    left="-55px"
+                    position="absolute"
+                    className="sa-1"
+                  ></Box>
 
-              <Text
-                color="#3D3D3D"
-                fontFamily="Montserrat"
-                fontWeight="400"
-                fontSize=".9rem"
-                className="ph"
-                textAlign="start"
-                mt="10px"
-              >
-                {data.body}
-              </Text>
-            </Box>
+                  <Box
+                    bg="#E5E9F2"
+                    h="70px"
+                    w="60px"
+                    borderBottomRightRadius="1.3rem"
+                    position="absolute"
+                    top="0"
+                    left="-59px"
+                    className="sb-3"
+                  ></Box>
+                  <Box
+                    bg="#E5E9F2"
+                    h="70px"
+                    w="60px"
+                    borderTopLeftRadius="1.3rem"
+                    position="absolute"
+                    bottom="-70px"
+                    left="15px"
+                    className="sb-4"
+                  ></Box>
+                </Box>
+
+                {/* 3d model / image */}
+                <Box
+                  display="flex"
+                  justifyContent="space-between"
+                  mt="-15px"
+                  className="m-cnt"
+                >
+                  <Box
+                    zIndex="20"
+                    bg="#745AC3"
+                    borderLeftRadius="1.5rem"
+                    borderBottomRightRadius="1.5rem"
+                    p="10px"
+                    w="100%"
+                    className="mp br-4"
+                  >
+                    {data.is_3dModel ? (
+                      <Box
+                        bg="#E5E9F2"
+                        h="100%"
+                        borderRadius="1.5rem"
+                        overflow="hidden"
+                      >
+                        <ModelViewer url={data.media_path} />
+                      </Box>
+                    ) : (
+                      <Image
+                        className="m-img"
+                        w="100%"
+                        borderRadius="1.5rem"
+                        src={data.media_path}
+                      />
+                    )}
+                  </Box>
+                  <Box minW="201px" className="m-g pc" pt="50px" zIndex="20">
+                    {/* body text for large screen */}
+                    <Text
+                      w="201px"
+                      ps="10px"
+                      textAlign="start"
+                      color="#3D3D3D"
+                      fontFamily="Montserrat"
+                      fontWeight="400"
+                      fontSize=".9rem"
+                      className="pc"
+                    >
+                      {data.body}
+                    </Text>
+                  </Box>
+                </Box>
+
+                {/* body text for small screen */}
+                <Text
+                  color="#3D3D3D"
+                  fontFamily="Montserrat"
+                  fontWeight="400"
+                  fontSize=".9rem"
+                  className="ph"
+                  textAlign="start"
+                  mt="10px"
+                >
+                  {data.body}
+                </Text>
+              </Box>
+            </>
           )}
         </>
       ))}

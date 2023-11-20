@@ -10,6 +10,7 @@ const About = () => {
       borderRadius="1.5rem"
       className="abt-wrap"
     >
+      {/* heading */}
       <Text
         fontFamily="Bebas Neue"
         fontWeight="400"
@@ -23,6 +24,8 @@ const About = () => {
       >
         ABOUT US
       </Text>
+
+      {/* description */}
       <Text
         color="#3D3D3D"
         fontFamily="Montserrat"

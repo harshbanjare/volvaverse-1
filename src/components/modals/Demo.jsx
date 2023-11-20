@@ -72,7 +72,7 @@ const Demo = ({ children }) => {
       console.log(name, companyName, email, interest, description);
 
       const res = await axios.post(
-        "https://backend.volaverse.com/block/addUser",
+        "https://business.volaverse.com/backend/addData",
         {
           fullName: name,
           companyName: companyName,

@@ -12,6 +12,7 @@ const Footer = () => {
       py="55px"
       className="foot"
     >
+      {/* social icons  */}
       <Box
         display="flex"
         justifyContent="center"
@@ -76,6 +77,8 @@ const Footer = () => {
           </svg>
         </a>
       </Box>
+
+      {/* links  */}
       <Box
         display="flex"
         justifyContent="center"
@@ -97,6 +100,8 @@ const Footer = () => {
         <Link to="/">terms of use</Link>
         <Link to="/">policy privacy</Link>
       </Box>
+
+      {/* logo  */}
       <Box display="flex" gap="18px" justifyContent="center">
         <Image h="2.5rem" src="/images/logo1.png" />
         <Text

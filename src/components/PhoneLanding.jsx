@@ -3,36 +3,11 @@ import React, { useEffect } from "react";
 import Demo from "./modals/Demo";
 
 const PhoneLanding = () => {
-  // useEffect(() => {
-  //   const imageElements = document.querySelectorAll("img");
-
-  //   const handleImageLoad = () => {
-  //     const allImagesLoaded = Array.from(imageElements).every(
-  //       (img) => img.complete && img.naturalHeight !== 0
-  //     );
-  //     console.log(allImagesLoaded);
-
-  //     if (allImagesLoaded) {
-  //       onImagesLoaded(true);
-  //     } else {
-  //       onImagesLoaded(false);
-  //     }
-  //   };
-
-  //   imageElements.forEach((img) => {
-  //     img.addEventListener("load", handleImageLoad);
-  //   });
-
-  //   return () => {
-  //     imageElements.forEach((img) => {
-  //       img.removeEventListener("load", handleImageLoad);
-  //     });
-  //   };
-  // }, [onImagesLoaded]);
-
   return (
     <Box>
+      {/* 1st box */}
       <Box borderRadius="1.5rem" border="1px solid #A5A5A5" p="25px 7px">
+        {/* main title  */}
         <Text
           textAlign="center"
           textTransform="uppercase"
@@ -46,6 +21,8 @@ const PhoneLanding = () => {
         >
           Get your own metaverse scene
         </Text>
+
+        {/* main description */}
         <Text
           textAlign="center"
           fontFamily="Montserrat"
@@ -58,6 +35,8 @@ const PhoneLanding = () => {
           that will soon be printed or disseminated via digital channels. lorem
           ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum
         </Text>
+
+        {/* buttons */}
         <Box display="flex" justifyContent="space-evenly">
           <Demo>
             <Button
@@ -87,6 +66,7 @@ const PhoneLanding = () => {
       </Box>
 
       <Box position="relative" mt="35px">
+        {/* center purple patch  */}
         <Box
           h="100px"
           w="100px"
@@ -98,11 +78,14 @@ const PhoneLanding = () => {
         ></Box>
 
         <div className="grd">
+          {/* img-1 */}
           <Box bg="#E5E9F2" p="4px" zIndex="20" borderRadius="1rem">
             <Box bg="#F6A1C0" borderRadius="1rem" className="cor-img-1">
               <Image loading="lazy" src="/images/img9.png" w="100%" />
             </Box>
           </Box>
+
+          {/* img-2 */}
           <Box bg="#745AC3" p="4px" zIndex="20" borderRadius="1rem">
             <Image
               loading="lazy"
@@ -113,6 +96,8 @@ const PhoneLanding = () => {
               className="fade-in"
             />
           </Box>
+
+          {/* img-3 */}
           <Box bg="#745AC3" p="4px" zIndex="20" borderRadius="1rem">
             <Image
               src="/images/img8.png"
@@ -123,6 +108,8 @@ const PhoneLanding = () => {
               className="fade-in"
             />
           </Box>
+
+          {/* img-4 */}
           <Box bg="#E5E9F2" p="4px" zIndex="20" borderRadius="1rem">
             <Image
               loading="lazy"

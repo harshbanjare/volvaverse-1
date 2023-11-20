@@ -14,6 +14,7 @@ const PhoneHeader = () => {
 
   return (
     <>
+      {/* bg */}
       <Box
         bg="#F6A1C0"
         borderBottomRadius="1.8rem"
@@ -25,6 +26,7 @@ const PhoneHeader = () => {
         w="100%"
         className="ph-nav"
       >
+        {/* logo */}
         <Box display="flex" gap="10px">
           <Image h="35px" src="/images/logo1.png" />
           <Text
@@ -37,6 +39,8 @@ const PhoneHeader = () => {
             VOLAVERSE
           </Text>
         </Box>
+
+        {/* toggle btn */}
         <Box>
           <svg
             xmlns="http://www.w3.org/2000/svg"
@@ -81,6 +85,8 @@ const PhoneHeader = () => {
           </svg>
         </Box>
       </Box>
+
+      {/* collapled div */}
       <Collapse in={isOpen} animateOpacity>
         <Box
           p="20px 5px"
