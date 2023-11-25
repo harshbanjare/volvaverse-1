@@ -12,28 +12,32 @@ import "aos/dist/aos.css";
 import { jelly } from "ldrs";
 
 const Home = () => {
-  const [isLoaded, setIsLoaded] = useState(false);
+  const [loading, setLoading] = useState(true);
 
-  const handleImagesLoaded = (loaded) => {
-    // setIsLoaded(loaded);
-    // console.log(loaded);
-    // console.log(isLoaded);
+  const handleModelLoad = () => {
+    setLoading(false);
   };
 
   useEffect(() => {
     jelly.register();
     Aos.init();
 
-    const loadingTimeout = setTimeout(() => {
-      setIsLoaded(true);
-    }, 2000);
+    // const loadingTimeout = setTimeout(() => {
+    //   setIsLoaded(true);
+    // }, 2000);
 
-    return () => clearTimeout(loadingTimeout);
+    // return () => clearTimeout(loadingTimeout);
   }, []);
+
+  useEffect(() => {
+    console.log(loading);
+  }, [loading]);
+
+  // console.log(loading);
 
   return (
     <>
-      {!isLoaded ? (
+      {loading ? (
         <Box
           display="flex"
           justifyContent="center"
@@ -45,7 +49,7 @@ const Home = () => {
       ) : (
         <Box bg="#E5E9F2">
           <Box px="100px" className="pd">
-            <Landing onImagesLoaded={handleImagesLoaded} />
+            <Landing />
           </Box>
 
           {/* small devices header */}
@@ -66,7 +70,7 @@ const Home = () => {
 
           {/* services */}
           <Box px="100px" className="pd">
-            <Services />
+            <Services onModelLoad={handleModelLoad} />
           </Box>
 
           {/* schedule call */}

@@ -1,11 +1,22 @@
 import { Box, Image, Text } from "@chakra-ui/react";
-import React, { useEffect } from "react";
+import React, { useEffect, useState } from "react";
 import ModelViewer from "./models/Model1";
 import servicesData from "../data/services/data";
 
-const Services = () => {
+const Services = ({ onModelLoad }) => {
+  // const [loading, setLoading] = useState(true);
+
+  // const handleModelLoad = () => {
+  //   setLoading(false);
+  // };
+
+  // useEffect(() => {
+  //   console.log(loading);
+  // }, [loading]);
+
   return (
     <Box mb="150px" className="s-mb">
+      {/* {loading ? <>loading</> : null} */}
       {/* heading */}
       <Text
         color="#3D3D3D"
@@ -122,7 +133,7 @@ const Services = () => {
                       borderRadius="1.5rem"
                       overflow="hidden"
                     >
-                      <ModelViewer url={data.media_path} />
+                      <ModelViewer data={data} onModelLoad={onModelLoad} />
                     </Box>
                   ) : (
                     <Image
@@ -230,7 +241,7 @@ const Services = () => {
                         borderRadius="1.5rem"
                         overflow="hidden"
                       >
-                        <ModelViewer url={data.media_path} />
+                        <ModelViewer data={data} onModelLoad={onModelLoad} />
                       </Box>
                     ) : (
                       <Image
