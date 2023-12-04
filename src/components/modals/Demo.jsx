@@ -69,7 +69,7 @@ const Demo = ({ children }) => {
     setLoading(true);
 
     try {
-      console.log(name, companyName, email, interest, description);
+      // console.log(name, companyName, email, interest, description);
 
       const res = await axios.post(
         "https://business.volaverse.com/backend/addData",
@@ -82,28 +82,28 @@ const Demo = ({ children }) => {
         }
       );
 
-      console.log(res);
+      // console.log(res);
 
       if (res.data && res.data.status === "success") {
         setMessage(res.data.message);
         setSubmitted(true);
         setSubmitError(false);
         onClose();
-        console.log(res.data.message);
+        // console.log(res.data.message);
         setName("");
         setCompanyName("");
         setEmail("");
         setInterest("");
         setDescription("");
       } else {
-        console.log(res.data.message);
+        // console.log(res.data.message);
         setMessage(res.data.message);
         setSubmitted(false);
         setSubmitError(true);
       }
       setLoading(false);
     } catch (error) {
-      console.log(error);
+      // console.log(error);
       setMessage(error);
       setSubmitted(false);
       setSubmitError(true);

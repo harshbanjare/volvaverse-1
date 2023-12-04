@@ -3,16 +3,19 @@ import React, { useEffect, useState } from "react";
 import ModelViewer from "./models/Model1";
 import servicesData from "../data/services/data";
 
-const Services = ({ onModelLoad }) => {
+const Services = ({ handleModelLoad }) => {
   // const [loading, setLoading] = useState(true);
 
-  // const handleModelLoad = () => {
-  //   setLoading(false);
-  // };
+  const onModelLoad = () => {
+    // console.log("cde");
+    handleModelLoad();
+    // setLoading(false);
+  };
 
-  // useEffect(() => {
-  //   console.log(loading);
-  // }, [loading]);
+  useEffect(() => {
+    // console.log("service");
+    window.scrollTo(0, 0);
+  }, []);
 
   return (
     <Box mb="150px" className="s-mb">

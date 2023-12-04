@@ -15,23 +15,21 @@ const Home = () => {
   const [loading, setLoading] = useState(true);
 
   const handleModelLoad = () => {
+    // console.log("abc");
     setLoading(false);
   };
 
   useEffect(() => {
     jelly.register();
     Aos.init();
-
-    // const loadingTimeout = setTimeout(() => {
-    //   setIsLoaded(true);
-    // }, 2000);
-
-    // return () => clearTimeout(loadingTimeout);
+    window.scrollTo(0, 0);
   }, []);
 
   useEffect(() => {
-    console.log(loading);
+    // console.log(loading);
   }, [loading]);
+
+  const servicesComponent = <Services handleModelLoad={handleModelLoad} />;
 
   // console.log(loading);
 
@@ -42,9 +40,13 @@ const Home = () => {
           display="flex"
           justifyContent="center"
           alignItems="center"
-          minHeight="100vh"
+          h="100vh"
+          bg="#E5E9F2"
         >
           <l-jelly size="50" speed="1" color="#745AC3"></l-jelly>
+          <Box position="absolute" left="-10000px">
+            {servicesComponent}
+          </Box>
         </Box>
       ) : (
         <Box bg="#E5E9F2">
@@ -70,7 +72,7 @@ const Home = () => {
 
           {/* services */}
           <Box px="100px" className="pd">
-            <Services onModelLoad={handleModelLoad} />
+            <Services handleModelLoad={handleModelLoad} />
           </Box>
 
           {/* schedule call */}
