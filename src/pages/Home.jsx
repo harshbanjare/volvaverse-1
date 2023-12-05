@@ -43,7 +43,9 @@ const Home = () => {
           h="100vh"
           bg="#E5E9F2"
         >
-          <l-jelly size="50" speed="1" color="#745AC3"></l-jelly>
+          <Box position="fixed">
+            <l-jelly size="50" speed="1" color="#745AC3"></l-jelly>
+          </Box>
           <Box position="absolute" left="-10000px">
             {servicesComponent}
           </Box>
